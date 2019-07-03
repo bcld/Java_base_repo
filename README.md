@@ -1,2 +1,5 @@
 # Java_repo
-some Java_base code
+一些java基础知识的相关代码
+
+Some Java base code
+
