@@ -2,7 +2,7 @@ package com.derek;
 
 public class SearchRepate {
     public static void main(String[] args) {
-        int[] arr1 = {11, 23, 45, 23, 66, 23, 16, 27, 16, 11, 69, 88, 11, 45, 23, 23};
+        int[] arr1 = {11, 23, 45, 23, 66, 23, 16, 27, 16, 11, 69, 88, 11, 45, 23, 11};
         tongJi(arr1);
     }
 
