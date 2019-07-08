@@ -50,21 +50,28 @@ public class manageStudent {
 
     public static void addStudent(ArrayList<Student> array) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("请输入学生号：");
-        String id = sc.nextLine();
+        boolean xunhuan=true;
+        String id="";
 
-        //判断学号是否存在
-        int length=array.size();
-        if (array == null || array.size() == 0) {
-        }else{
-            for (int i = 0; i <length ; i++) {
-                if(array.get(i).getId().equals(id)){
-                    System.out.println("输入的学号已经存在！");
-                    return;
+        while(xunhuan) {
+            System.out.println("请输入学生号：");
+            id = sc.nextLine();
+
+            //判断学号是否存在
+            int length = array.size();
+            if (array == null || array.size() == 0) {
+                xunhuan=false;
+            } else {
+                for (int i = 0; i < length; i++) {
+                    if (array.get(i).getId().equals(id)) {
+                        System.out.println("输入的学号已经存在！");
+                        break;
+                    }else{
+                        xunhuan=false;
+                    }
                 }
             }
         }
-
 
 
         System.out.println("请输入学生名字：");
