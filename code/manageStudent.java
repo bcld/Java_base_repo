@@ -53,6 +53,20 @@ public class manageStudent {
         System.out.println("请输入学生号：");
         String id = sc.nextLine();
 
+        //判断学号是否存在
+        int length=array.size();
+        if (array == null || array.size() == 0) {
+        }else{
+            for (int i = 0; i <length ; i++) {
+                if(array.get(i).getId().equals(id)){
+                    System.out.println("输入的学号已经存在！");
+                    return;
+                }
+            }
+        }
+
+
+
         System.out.println("请输入学生名字：");
         String name = sc.nextLine();
 
@@ -109,6 +123,7 @@ public class manageStudent {
             }
 
         }
+        System.out.println("输入学号有误！");
 
     }
 
@@ -127,7 +142,7 @@ public class manageStudent {
 
         }
 
-        System.out.println("不存在该学号！");
+        System.out.println("输入学号有误！");
 
 
     }
